@@ -11,15 +11,24 @@ import qualified Circular
 primeNumber :: Integer
 primeNumber = 999999937 -- 98765431 -- 78680101 -- 16183
 
+noPrime :: Int
+noPrime = 100000
+
 main :: IO ()
 main =
   defaultMain $
   [
-    bgroup "isPrime"
+    bgroup ("isPrime " ++ show primeNumber)
     [
       bench "naive" $ whnf (isPrime [2..]) primeNumber
     , bench "circular" $ whnf (isPrime Circular.primes) primeNumber
     , bench "primes" $ whnf (isPrime Primes.primes) primeNumber
     , bench "primes isPrime" $ whnf Primes.isPrime primeNumber
+    ]
+  ,
+    bgroup ("prime " ++ show noPrime)
+    [
+      bench "circular" $ whnf (Circular.primes !!) noPrime
+    , bench "primes" $ whnf ((Primes.primes :: [Integer]) !!) noPrime
     ]
   ]
