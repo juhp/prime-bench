@@ -28,7 +28,6 @@ executable prime-bench
   main-is:             Main.hs
   other-modules:       IsPrime
                        Circular
-                       Primes
   hs-source-dirs:      src
   build-depends:       base < 5,
                        tasty-bench,
