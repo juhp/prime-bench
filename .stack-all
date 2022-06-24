@@ -1,0 +1,3 @@
+[versions]
+# lts-16 too old
+oldest = lts-18
