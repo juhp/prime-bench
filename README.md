@@ -37,3 +37,7 @@ The benchmarking and `isPrime` are derived from the code in chapter 10 of [Haske
 ## Build
 
 Run with  `cabal run` or `stack run`
+
+## Contribute
+
+Feedback and suggestions welcome
