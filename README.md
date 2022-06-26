@@ -5,7 +5,7 @@ tasty-bench of basic prime algorithms
 So far it compares:
 
 - naive isPrime over integers
-- Bird's algorithm (taken from [Thinking Functioally with Haskell](https://www.cs.ox.ac.uk/publications/books/functional/)
+- Bird's algorithm (taken from [Thinking Functionally with Haskell](https://www.cs.ox.ac.uk/publications/books/functional/)
 - the circular algorithm from Colin Runciman's [Function Pearl](https://www.semanticscholar.org/paper/Lazy-Wheel-Sieves-and-Spirals-of-Primes-Runciman/09d512179ed4208604f6d8ddcb1c5f87217ebbe0)
 - the [primes](https://hackage.haskell.org/package/primes) library which uses a wheel sieve, also based on the same paper
 
@@ -33,3 +33,7 @@ The benchmarking and `isPrime` are derived from the code in chapter 10 of [Haske
     primes:         OK (0.25s)
       2.36 ms ± 193 μs
 ```
+
+## Build
+
+Run with  `cabal run` or `stack run`
