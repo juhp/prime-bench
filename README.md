@@ -15,12 +15,21 @@ The benchmarking and `isPrime` are derived from the code in chapter 10 of [Haske
 
 ```
   isPrime 999999937
-    naive:          OK (0.29s)
-      554  μs ±  25 μs
-    circular:       OK (0.11s)
-      59.6 μs ± 5.4 μs
+    naive:          OK (0.31s)
+      584  μs ±  51 μs
+    bird:           OK (0.27s)
+      62.1 μs ± 4.2 μs
+    circular:       OK (1.04s)
+      62.0 μs ± 839 ns
     primes:         OK (0.25s)
-      60.5 μs ± 5.3 μs
-    primes isPrime: OK (0.26s)
-      62.6 μs ± 4.9 μs
+      61.8 μs ± 3.2 μs
+    primes isPrime: OK (0.13s)
+      61.3 μs ± 6.1 μs
+  prime 100000
+    Bird:           OK (0.80s)
+      157  μs ±  14 μs
+    circular:       OK (2.38s)
+      501  μs ±  29 μs
+    primes:         OK (0.25s)
+      2.36 ms ± 193 μs
 ```
