@@ -27,6 +27,7 @@ source-repository head
 executable prime-bench
   main-is:             Main.hs
   other-modules:       IsPrime
+                       Bird
                        Circular
   hs-source-dirs:      src
   build-depends:       base < 5,

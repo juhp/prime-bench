@@ -6,6 +6,7 @@ import Test.Tasty.Bench
 import qualified Data.Numbers.Primes as Primes
 
 import IsPrime (isPrime)
+import qualified Bird
 import qualified Circular
 
 primeNumber :: Integer
@@ -21,6 +22,7 @@ main =
     bgroup ("isPrime " ++ show primeNumber)
     [
       bench "naive" $ whnf (isPrime [2..]) primeNumber
+    , bench "bird" $ whnf (isPrime Bird.primes) primeNumber
     , bench "circular" $ whnf (isPrime Circular.primes) primeNumber
     , bench "primes" $ whnf (isPrime Primes.primes) primeNumber
     , bench "primes isPrime" $ whnf Primes.isPrime primeNumber
@@ -28,7 +30,8 @@ main =
   ,
     bgroup ("prime " ++ show noPrime)
     [
-      bench "circular" $ whnf (Circular.primes !!) noPrime
+      bench "Bird" $ whnf (Bird.primes !!) noPrime
+    , bench "circular" $ whnf (Circular.primes !!) noPrime
     , bench "primes" $ whnf ((Primes.primes :: [Integer]) !!) noPrime
     ]
   ]
